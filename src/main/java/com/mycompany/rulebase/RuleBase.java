@@ -19,6 +19,8 @@ import javax.ejb.Stateless;
 @WebService(serviceName = "RuleBase")
 @Stateless()
 public class RuleBase {
+    
+    
 
     /**
      * Web service operation
@@ -29,27 +31,12 @@ public class RuleBase {
             @WebParam(name = "creditScore") int creditScore, 
             @WebParam(name = "loanAmount") double loanAmount, 
             @WebParam(name = "loanDuration") int loanDuration) {
-        //TODO write your implementation code here:
-   
-        //String dreamTeamJSON = "dreamTeamJSON";
-        //String dreamTeamXML = "dreamTeamXML";
-        //String bankXML = "bankXML";
-        //String bankJSON = "bankJSON";
         
-        //ArrayList<String> result = new ArrayList();
-
-        // GODE CREDITSCORE
-        //DreamTeamJSON
-        //DreamTeamXML
         
-        // DÅRLIGE CREDITSCORE < 400
-        //bankJSON
-        //bankXML
-              
-        if(creditScore <= 600){
-        return "dreamTeamJSON,dreamTeamXML";
+        if(creditScore <= 400){
+        return "DreamTeamJSONQueue,DreamTeamXMLQueue";
         }
-        return "bankXML,bankJSON";
+        return "cphbusiness,bankXML,cphbusiness.bankJSON";
     }
 
     /**
