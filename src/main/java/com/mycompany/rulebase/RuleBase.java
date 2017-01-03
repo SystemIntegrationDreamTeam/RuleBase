@@ -36,7 +36,7 @@ public class RuleBase {
         if(creditScore <= 400){
         return "DreamTeamJSONQueue,DreamTeamXMLQueue";
         }
-        return "cphbusiness,bankXML,cphbusiness.bankJSON";
+        return "cphbusiness.bankXML,cphbusiness.bankJSON";
     }
 
     /**
